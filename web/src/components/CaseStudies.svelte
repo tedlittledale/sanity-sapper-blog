@@ -12,8 +12,9 @@
     padding: 15px;
     grid-gap: 15px;
   }
-  article {
+  a {
     position: relative;
+    display: block;
   }
   .details {
     position: absolute;
@@ -62,13 +63,12 @@
         rel="prefetch"
         href="work/{slug.current}"
         style="--lightsmoke:{hexToRgba(lightVibrant.background, '0.2')};--smoke:{hexToRgba(lightVibrant.background, '0.5')};--solidSmoke:{hexToRgba(lightVibrant.background, '1')};">
-        <article>
-          <Image {...generatedImage} />
-          <div class="details">
-            <h3>{title}</h3>
-          </div>
 
-        </article>
+        <Image {...generatedImage} />
+        <div class="details">
+          <h3>{title}</h3>
+        </div>
+
       </a>
     </div>
   {/each}
