@@ -47,10 +47,10 @@
       width: 100vw;
       z-index: 1000;
       grid: 1fr / auto auto;
-      > div {
-        align-self: center;
-        justify-self: flex-end;
-      }
+    }
+    nav.mobile > div {
+      align-self: center;
+      justify-self: flex-end;
     }
   }
 

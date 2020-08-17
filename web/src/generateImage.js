@@ -1,6 +1,7 @@
 import urlFor from "./sanityImageUrlBuilder";
 
 function generateImage(image) {
+  console.log({ image });
   // aspectRatio (to prevent jank)
   const pallete = image.asset.metadata.palette;
   let aspectRatio;
@@ -32,6 +33,7 @@ function generateImage(image) {
   // Return the object shape required by Image.svelte (minus a couple)
   return {
     aspectRatio,
+    alt: image.alt,
     placeholder,
     src,
     srcset,

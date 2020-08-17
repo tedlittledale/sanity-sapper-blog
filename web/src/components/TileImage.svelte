@@ -9,7 +9,7 @@
   export let cover = true;
   export let padding = 0;
   export let sizes = "auto"; // 'auto' only works when using `lazysizes`
-
+  console.log({ alt });
   let padding_bottom_percentage = 100 / aspectRatio + "%";
 </script>
 
