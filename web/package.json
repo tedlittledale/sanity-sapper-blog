@@ -44,6 +44,9 @@
     "rollup-plugin-terser": "^4.0.4",
     "sapper": "^0.27.11",
     "svelte": "^3.20.1",
-    "svelte-loader": "^2.13.6"
+    "svelte-loader": "^2.13.6",
+    "@sanity/cli": "^1.149.16",
+    "lazysizes": "^5.2.2",
+    "lerna": "^3.14.0"
   }
 }
