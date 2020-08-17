@@ -1,9 +1,9 @@
 import { format } from 'date-fns'
 
 export default {
-  name: 'post',
+  name: 'caseStudy',
   type: 'document',
-  title: 'Blog Post',
+  title: 'Case Studies',
   fields: [
     {
       name: 'title',
@@ -40,16 +40,6 @@ export default {
         'This ends up on summary pages, on Google, when people share your post in social media.'
     },
     {
-      name: 'authors',
-      title: 'Authors',
-      type: 'array',
-      of: [
-        {
-          type: 'authorReference'
-        }
-      ]
-    },
-    {
       name: 'categories',
       type: 'array',
       title: 'Categories',
@@ -63,9 +53,51 @@ export default {
       ]
     },
     {
-      name: 'body',
-      type: 'bodyPortableText',
-      title: 'Body'
+      name: 'caseStudyClient',
+      type: 'reference',
+      title: 'Client',
+      description: 'Who was the client',
+      to: [
+        {
+          type: 'client'
+        }
+      ]
+    },
+    {
+      name: 'problemSummary',
+      type: 'string',
+      title: 'The Problem Summary',
+      description: 'Summarise the problem in one sentence'
+    },
+    {
+      name: 'problemDetail',
+      title: 'The Problem Detail',
+      description: 'Expandy on the problem',
+      type: 'bodyPortableText'
+    },
+    {
+      name: 'answerSummary',
+      type: 'string',
+      title: 'The Answer Summary',
+      description: 'Summarise the answer in a sentence'
+    },
+    {
+      name: 'answerDetail',
+      title: 'The Answer Detail',
+      description: 'Expand on the answer',
+      type: 'bodyPortableText'
+    },
+    {
+      name: 'impactSummary',
+      type: 'string',
+      title: 'The Impact Summary',
+      description: 'Summarise the impact in a sentence '
+    },
+    {
+      name: 'impactDetail',
+      title: 'The Impact Detail',
+      description: 'Expand on the Impact',
+      type: 'bodyPortableText'
     }
   ],
   orderings: [

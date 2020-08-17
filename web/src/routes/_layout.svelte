@@ -1,22 +1,17 @@
 <script>
-	import Nav from '../components/Nav.svelte';
-
-	export let segment;
+  import Nav from "../components/Nav.svelte";
+  import Sidebar from "../components/Sidebar.svelte";
+  export let segment;
+  let open = false;
 </script>
 
 <style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+
 </style>
 
-<Nav {segment}/>
+<Sidebar bind:open />
+<Nav {segment} bind:sidebar={open} />
 
 <main>
-	<slot></slot>
+  <slot />
 </main>
