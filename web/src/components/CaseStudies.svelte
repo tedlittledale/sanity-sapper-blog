@@ -7,9 +7,10 @@
 
 <style>
   div.grid {
+    display: grid;
     background: var(--lightGrey);
-    padding: 40px;
-    grid-gap: 40px;
+    padding: 15px;
+    grid-gap: 15px;
   }
   article {
     position: relative;
@@ -36,6 +37,10 @@
     margin: 0;
   }
   @media only screen and (min-width: 500px) {
+    .grid {
+      padding: 40px;
+      grid-gap: 40px;
+    }
     .details {
       display: none;
       background: var(--smoke);
@@ -55,7 +60,7 @@
     <div>
       <a
         rel="prefetch"
-        href="casestudies/{slug.current}"
+        href="work/{slug.current}"
         style="--lightsmoke:{hexToRgba(lightVibrant.background, '0.2')};--smoke:{hexToRgba(lightVibrant.background, '0.5')};--solidSmoke:{hexToRgba(lightVibrant.background, '1')};">
         <article>
           <Image {...generatedImage} />

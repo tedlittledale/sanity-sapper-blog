@@ -912,8 +912,9 @@ button.small {
 
 .grid {
   --gridCols: 2;
-  display: block;
+  display: grid;
   grid-template-columns: repeat(var(--gridCols), 1fr);
+  grid: 1fr / 1fr;
 }
 
 .grid--split {

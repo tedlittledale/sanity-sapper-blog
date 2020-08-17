@@ -100,7 +100,7 @@
 <nav
   class="mobile"
   style="--mobilenavbackground:{!!segment || scrolled ? 'rgba(255, 255, 255, 0.9)' : 'none'};">
-  <Logo textColor={!!segment || scrolled ? 'black' : 'white'} />
+  <Logo textColor={!!segment || scrolled || sidebar ? 'black' : 'white'} />
   <div>
     <Hamburger
       bind:open={sidebar}
@@ -116,12 +116,14 @@
 
     <li>
       <h5>
-        <a class={segment === undefined ? 'selected' : ''} href=".">home</a>
+        <a class={segment === undefined ? 'selected' : ''} href="/#">home</a>
       </h5>
     </li>
     <li>
       <h5>
-        <a class={segment === 'about' ? 'selected' : ''} href="about">about</a>
+        <a class={segment === 'about' ? 'selected' : ''} href="/#about">
+          about
+        </a>
       </h5>
     </li>
 
@@ -132,8 +134,8 @@
         <a
           rel="prefetch"
           class={segment === 'blog' ? 'selected' : ''}
-          href="casestudies">
-          case studies
+          href="/#work">
+          work
         </a>
       </h5>
     </li>

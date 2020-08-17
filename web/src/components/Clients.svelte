@@ -52,9 +52,6 @@
 
     <article style="--genbg:{hexToRgba(lightVibrant.background, '0.2')};">
       <Image {...generatedImage} cover={false} padding="25%" />
-      <div class="details">
-        <h3>{title}</h3>
-      </div>
 
     </article>
   {/each}

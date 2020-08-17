@@ -66,20 +66,36 @@
     background: var(--darkGrey);
     color: var(--white);
   }
+  div {
+    scroll-behavior: smooth;
+  }
+  @media screen and (prefers-reduced-motion: reduce) {
+    div {
+      scroll-behavior: auto;
+    }
+  }
 </style>
 
 <svelte:head>
   <title>Sapper project template</title>
 
 </svelte:head>
-
-<Hero {generatedImage}>
-  <h1>{title}</h1>
-  <p>{description}</p>
-</Hero>
-<About />
-
-<h3>Case studies</h3>
-<CaseStudies {casestudies} />
-<h3>Clients</h3>
-<Clients {clients} />
+<div>
+  <div id="top">
+    <Hero {generatedImage}>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </Hero>
+  </div>
+  <div id="about">
+    <About />
+  </div>
+  <div id="work">
+    <h3>Work</h3>
+    <CaseStudies {casestudies} />
+  </div>
+  <div id="clients">
+    <h3>Clients</h3>
+    <Clients {clients} />
+  </div>
+</div>
