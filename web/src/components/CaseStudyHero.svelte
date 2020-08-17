@@ -52,6 +52,12 @@
   .image > div {
     height: 100%;
   }
+  @media only screen and (min-width: 499px) {
+    .image > div {
+      width: 100%;
+      height: auto;
+    }
+  }
 </style>
 
 <svelte:window bind:innerHeight={windowHeight} />

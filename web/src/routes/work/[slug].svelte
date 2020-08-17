@@ -34,6 +34,7 @@
     const caseStudy = await client
       .fetch(query, { slug })
       .catch(err => this.error(500, err));
+    console.log({ caseStudy });
     return {
       caseStudy: {
         ...caseStudy,
@@ -46,7 +47,7 @@
 <script>
   export let caseStudy;
   let h;
-  console.log({ h });
+  console.log({ caseStudy });
 </script>
 
 <style>
