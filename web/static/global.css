@@ -618,6 +618,7 @@ textarea {
 @font-face {
   font-family: "Poppins";
   font-style: normal;
+  font-display: swap;
   font-weight: 400;
   src: url("../fonts/poppins-v12-latin-regular.eot"); /* IE9 Compat Modes */
   src: local("Poppins Regular"), local("Poppins-Regular"),
@@ -636,6 +637,7 @@ textarea {
 @font-face {
   font-family: "Poppins";
   font-style: normal;
+  font-display: swap;
   font-weight: 700;
   src: url("../fonts/poppins-v12-latin-700.eot"); /* IE9 Compat Modes */
   src: local("Poppins Bold"), local("Poppins-Bold"),
@@ -651,6 +653,7 @@ textarea {
 /* poppins-700italic - latin */
 @font-face {
   font-family: "Poppins";
+  font-display: swap;
   font-style: italic;
   font-weight: 700;
   src: url("../fonts/poppins-v12-latin-700italic.eot"); /* IE9 Compat Modes */
